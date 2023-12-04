@@ -28,7 +28,7 @@ const ctx = canvas.getContext("2d") as CanvasRenderingContext2D
 const SPACING = 30
 const CIRC_RADIUS = 3
 
-// i-hat, j-hat are positive
+// +i-hat, -j-hat
 const cameraCoords = { x: 0, y: 0 }
 
 // relative to client's window
@@ -85,8 +85,7 @@ function draw() {
   ctx.fillStyle = "lightgrey"
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  ctx.save()      // TODO: Fix pop-in on x-axis
-
+  ctx.save()
   
   // Zoom effect
   // TODO: Zoom in/out from cursor pos
